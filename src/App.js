@@ -60,11 +60,7 @@ const App = () => {
     [data, setInvoice]
   )
 
-  if (!data) {
-    return null
-  }
-
-  const { invoices, timestamp, ...rest } = data
+  const { invoices, timestamp, ...rest } = data || {}
 
   return (
     <div className="app">
