@@ -1,0 +1,24 @@
+.party-info {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  row-gap: 10px;
+  column-gap: 20px;
+  color: var(--gray-800);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.party-info dt {
+  font-weight: bold;
+  justify-self: end;
+  color: var(--gray-500);
+}
+
+.party-info dd {
+  margin: 0;
+}
+
+.party-info__aka {
+  color: var(--gray-600);
+}

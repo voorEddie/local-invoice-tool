@@ -1,0 +1,56 @@
+.inline-edit {
+  display: inline-flex;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.inline-edit__input-area {
+  width: 300px;
+  height: 80px;
+  padding: 0 25px;
+  position: absolute;
+  background-color: var(--gray-100);
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px var(--gray-500);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inline-edit__input-area input {
+  width: 70%;
+  height: 30px;
+  padding: 5px 10px;
+  border: var(--blue-400) 1px solid;
+}
+
+.inline-edit__button,
+.inline-edit__close-button,
+.inline-edit__confirm-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  color: var(--blue-600);
+  background-color: transparent;
+  vertical-align: bottom;
+}
+
+.inline-edit__close-button {
+  color: var(--red-600);
+}
+
+.inline-edit__button:hover,
+.inline-edit__close-button:hover,
+.inline-edit__confirm-button:hover {
+  cursor: pointer;
+}
+
+.inline-edit__button:hover,
+.inline-edit__confirm-button:hover {
+  color: var(--blue-300);
+}
+
+.inline-edit__close-button:hover {
+  color: var(--red-300);
+}

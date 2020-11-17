@@ -1,0 +1,209 @@
+.invoice-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-content__header,
+.invoice-content__main__invoice-to,
+.invoice-content__main__fee-wrapper,
+.invoice-content__footer {
+  padding: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  gap: 10px;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.invoice-content__header {
+  grid-template-columns: 0.5fr auto 2fr 6fr 0.5fr;
+  grid-template-areas:
+    '. B . C .'
+    '. A . C .';
+  border-bottom: 5px var(--gray-300) solid;
+}
+
+.invoice-content__header__heading,
+.invoice-content__header__logo {
+  justify-self: center;
+}
+
+.invoice-content__header__heading {
+  grid-area: A;
+  align-self: end;
+  margin: 0;
+  font-size: 56px;
+  font-weight: bold;
+  color: var(--blue-300);
+}
+
+.invoice-content__header__logo {
+  grid-area: B;
+  align-self: center;
+}
+
+.invoice-content__header__sender {
+  grid-area: C;
+  align-self: center;
+}
+
+.invoice-content__main__invoice-to {
+  margin: 0;
+  grid-template-columns: 0.5fr 7fr 4fr 0.5fr;
+  grid-template-areas:
+    '. A B .'
+    '. AU BU .'
+    '. AU . .'
+    '. AU C .'
+    '. AU CU .';
+}
+
+.invoice-content__main__invoice-to dd {
+  margin: 0;
+}
+
+.invoice-content__main__invoice-client {
+  grid-area: A;
+}
+
+.invoice-content__main__invoice-client + dd {
+  grid-area: AU;
+  align-self: end;
+}
+
+.invoice-content__main__invoice-client,
+.invoice-content__main__invoice-number,
+.invoice-content__main__invoice-date {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--gray-600);
+}
+
+.invoice-content__main__invoice-number + dd,
+.invoice-content__main__invoice-date + dd {
+  font-weight: bold;
+  color: var(--blue-500);
+}
+
+.invoice-content__main__invoice-number,
+.invoice-content__main__invoice-number + dd,
+.invoice-content__main__invoice-date,
+.invoice-content__main__invoice-date + dd {
+  justify-self: end;
+}
+
+.invoice-content__main__invoice-number {
+  grid-area: B;
+}
+
+.invoice-content__main__invoice-number + dd {
+  grid-area: BU;
+}
+
+.invoice-content__main__invoice-date {
+  grid-area: C;
+}
+
+.invoice-content__main__invoice-date + dd {
+  grid-area: CU;
+}
+
+.invoice-content__main__fee-wrapper {
+  grid-template-columns: 0.5fr 11fr 0.5fr;
+  padding-top: 0;
+}
+
+.invoice-content__payment-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-30px, 30px) rotate(-30deg);
+}
+
+.invoice-content__payment-status__clear,
+.invoice-content__payment-status__not-clear {
+  font-size: 30px;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.invoice-content__payment-status__clear {
+  color: var(--blue-500);
+  background-color: var(--blue-100);
+}
+
+.invoice-content__payment-status__not-clear {
+  color: var(--red-500);
+  background-color: var(--red-100);
+}
+
+.invoice-content__grower {
+  flex-grow: 1;
+}
+
+.invoice-content__footer {
+  background: var(--gray-200);
+  padding: 5px 20px 25px 20px;
+  grid-template-columns: 0.5fr 6.5fr 0.5fr 5fr 0.5fr;
+  grid-template-areas:
+    '. B . A .'
+    '. BU . AU .';
+}
+
+.invoice-content__notes-title,
+.invoice-content__terms-title {
+  margin: 20px 0 0 0;
+  color: var(--gray-700);
+  align-self: end;
+  font-size: 18px;
+}
+
+.invoice-content__notes-content,
+.invoice-content__terms-content {
+  margin: 10px 0;
+  color: var(--gray-700);
+  align-self: start;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.invoice-content__terms-content li + li {
+  margin-top: 5px;
+}
+
+.invoice-content__notes-title {
+  grid-area: A;
+}
+
+.invoice-content__notes-content {
+  grid-area: AU;
+}
+
+.invoice-content__terms-title {
+  grid-area: B;
+}
+
+.invoice-content__terms-content {
+  grid-area: BU;
+  list-style: square;
+  padding-left: 18px;
+}
+
+.invoice-content__terms-content__due-date,
+.invoice-content__terms-content__net,
+.invoice-content__terms-content__payment-method {
+  color: var(--red-500);
+  font-weight: bold;
+}
+
+.invoice-content__terms-content__net {
+  color: var(--gray-600);
+}
+
+.invoice-content__terms-content q {
+  color: var(--blue-400);
+  font-weight: bold;
+}

@@ -1,0 +1,13 @@
+.action-positioner {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.action-positioner--place-on-top {
+  height: auto;
+  width: 50%;
+  float: right;
+}

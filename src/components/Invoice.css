@@ -1,0 +1,67 @@
+.invoice-table-wrapper {
+  width: 800px;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-table thead {
+  background-color: var(--blue-400);
+  color: var(--white);
+  font-size: 13px;
+  text-align: right;
+}
+
+.invoice-table tbody {
+  color: var(--gray-700);
+  font-size: 14px;
+  text-align: right;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 10px;
+}
+
+.invoice-table td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.invoice-table td .button-wrapper {
+  display: inline-flex;
+}
+
+.invoice-table thead th:first-child,
+.invoice-table tbody td:first-child {
+  text-align: left;
+}
+
+.invoice-table tbody tr {
+  border-bottom: 2px var(--gray-300) solid;
+}
+
+.invoice-table tfoot {
+  text-align: right;
+}
+
+.last-generated {
+  font-size: 14px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-weight: bold;
+}
+
+.last-generated__title {
+  color: var(--gray-500);
+}
+
+.last-generated__date {
+  color: var(--blue-600);
+  margin-top: 10px;
+}
